@@ -40,9 +40,9 @@
       </div>
     </div>
     <ul class="slides">
-      <li style="background-image: url(img/slider_1.jpg);" class="overlay"></li>
-      <li style="background-image: url(img/slider_4.jpg);" class="overlay"></li>
-      <li style="background-image: url(img/slider_2.jpg);" class="overlay"></li>
+      {% for category_list in category_list_home %}
+              <li style="background-image: url(media/{{category_list.image}});" class="overlay"></li>
+      {% endfor %}
     </ul>
   </section>
   <!-- END: slider  -->
@@ -255,8 +255,8 @@
               <img src="{{agent.image.url}}" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
             </div>
             <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading mb0">{{agent}}</h2>
-              <p><small>{{agent.name}}</small></p>
+              <h2 class="probootstrap-card-heading mb0">{{agent.name}}</h2>
+              <p><small>{{agent.title}}</small></p>
             </div>
           </div>
         </div>
